@@ -5,20 +5,10 @@ const calculators = {
     operator: null,
 };
 const keys = document.querySelector('.keys');
-console.log('keys', keys);
-const buttons = document.querySelectorAll('button');
-buttons.forEach(button => {
-    button.addEventListener('click', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-    });
-});
-
 keys.addEventListener('click', e => {
     const { target } = e;
     console.log('target ', target);
     const { value } = target;
-    console.log('value', value);
     if (!target.matches('button')) {
         return;
     }
